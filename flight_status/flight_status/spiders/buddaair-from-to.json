@@ -1,0 +1,84 @@
+{
+  "from": [
+    { "fromLabel": "Kathmandu", "fromValue": "KTM" },
+    { "fromLabel": "Everest experience", "fromValue": "MTN", "type": "single" },
+    {
+      "fromLabel": "Annapurna experience",
+      "fromValue": "MTN",
+      "type": "single"
+    },
+    { "fromLabel": "Bhadrapur (jhapa)", "fromValue": "BDP" },
+    { "fromLabel": "Bhairahawa", "fromValue": "BWA" },
+    { "fromLabel": "Bharatpur (chitwan)", "fromValue": "BHR" },
+    { "fromLabel": "Biratnagar", "fromValue": "BIR" },
+    { "fromLabel": "Dhangadhi", "fromValue": "DHI" },
+    { "fromLabel": "Janakpur", "fromValue": "JKR" },
+    { "fromLabel": "Nepalgunj", "fromValue": "KEP" },
+    { "fromLabel": "Pokhara", "fromValue": "PKR" },
+    { "fromLabel": "Rajbiraj", "fromValue": "RJB" },
+    { "fromLabel": "Simara", "fromValue": "SIF" },
+    { "fromLabel": "Surkhet", "fromValue": "SKH" },
+    { "fromLabel": "Tumlingtar", "fromValue": "TMI" },
+    { "fromLabel": "Varanasi", "fromValue": "VNS" }
+  ],
+
+  "KTM": [
+    { "toLabel": "Bhadrapur (jhapa)", "toValue": "BDP" },
+    { "toLabel": "Bhairahawa", "toValue": "BWA" },
+    { "toLabel": "Bharatpur (chitwan)", "toValue": "BHR" },
+    { "toLabel": "Biratnagar", "toValue": "BIR" },
+    { "toLabel": "Dhangadhi", "toValue": "DHI" },
+    { "toLabel": "Janakpur", "toValue": "JKR" },
+    { "toLabel": "Nepalgunj", "toValue": "KEP" },
+    { "toLabel": "Pokhara", "toValue": "PKR" },
+    { "toLabel": "Rajbiraj", "toValue": "RJB" },
+    { "toLabel": "Simara", "toValue": "SIF" },
+    { "toLabel": "Surkhet", "toValue": "SKH" },
+    { "toLabel": "Tumlingtar", "toValue": "TMI" },
+    { "toLabel": "Varanasi", "toValue": "VNS" }
+  ],
+  "BDP": [
+    { "toLabel": "Kathmandu", "toValue": "KTM" },
+    { "toLabel": "Pokhara", "toValue": "PKR" }
+  ],
+  "BWA": [
+    { "toLabel": "Bharatpur (chitwan)", "toValue": "BHR" },
+    { "toLabel": "Kathmandu", "toValue": "KTM" },
+    { "toLabel": "Pokhara", "toValue": "PKR" }
+  ],
+  "BHR": [
+    { "toLabel": "Kathmandu", "toValue": "KTM" },
+    { "toLabel": "Pokhara", "toValue": "PKR" }
+  ],
+  "BIR": [
+    { "toLabel": "Kathmandu", "toValue": "KTM" },
+    { "toLabel": "Pokhara", "toValue": "PKR" },
+    { "toLabel": "Tumlingtar", "toValue": "TMI" }
+  ],
+  "DHI": [
+    { "toLabel": "Kathmandu", "toValue": "KTM" },
+    { "toLabel": "Pokhara", "toValue": "PKR" }
+  ],
+  "JKR": [{ "toLabel": "Kathmandu", "toValue": "KTM" }],
+  "KEP": [
+    { "toLabel": "Kathmandu", "toValue": "KTM" },
+    { "toLabel": "Pokhara", "toValue": "PKR" }
+  ],
+  "PKR": [
+    { "toLabel": "Bhairahawa", "toValue": "BWA" },
+    { "toLabel": "Bharatpur (chitwan)", "toValue": "BHR" },
+    { "toLabel": "Kathmandu", "toValue": "KTM" },
+    { "toLabel": "Nepalgunj", "toValue": "KEP" }
+  ],
+  "RJB": [{ "toLabel": "Kathmandu", "toValue": "KTM" }],
+  "SIF": [
+    { "toLabel": "Kathmandu", "toValue": "KTM" },
+    { "toLabel": "Pokhara", "toValue": "PKR" }
+  ],
+  "SKH": [{ "toLabel": "Kathmandu", "toValue": "KTM" }],
+  "TMI": [
+    { "toLabel": "Kathmandu", "toValue": "KTM" },
+    { "toLabel": "Biratnagar", "toValue": "BIR" }
+  ],
+  "VNS": [{ "toLabel": "Kathmandu", "toValue": "KTM" }]
+}
