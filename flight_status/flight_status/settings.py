@@ -7,7 +7,15 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+import datetime
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+OUTPUT_DIR = os.getenv("SCRAPY_OUTPUT_DIR", "outputs")
+
 BOT_NAME = "flight_status"
+now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
 SPIDER_MODULES = ["flight_status.spiders"]
 NEWSPIDER_MODULE = "flight_status.spiders"
@@ -85,3 +93,13 @@ DOWNLOAD_DELAY = 1
 
 # Set settings whose default value is deprecated to a future-proof value
 FEED_EXPORT_ENCODING = "utf-8"
+filename = f'%(name)s{now}.json'
+
+FEEDS = {
+    os.path.join(OUTPUT_DIR, filename): {
+        'format': 'json',
+        'encoding': 'utf8',
+        'store_empty': False,
+        'indent': 4,
+    },
+}

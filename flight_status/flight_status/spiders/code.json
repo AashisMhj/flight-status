@@ -1,0 +1,67 @@
+{
+    "Bhairahawa": {
+        "name": "Bhairahawa",
+        "code": "BWA"
+    },
+    "Kathmandu": {
+        "name": "Kathmandu",
+        "code": "KTM"
+    },
+    "Biratnagar": {
+        "name": "Biratnagar",
+        "code": "BIR"
+    },
+    "Coimbatore": {
+        "name": "Coimbatore",
+        "code": "CMB",
+        "type": "own"
+    },
+    "Everest Mountain Flight": {
+        "name": "Everest Mountain Flight",
+        "code": "MTN"
+    },
+    "Janakpur": {
+        "name": "Janakpur",
+        "code": "JKR"
+    },
+    "Jomshom": {
+        "name": "Jomshom",
+        "code": "JOM",
+        "type": "own"
+    },
+    "Kamlabazar": {
+        "name": "Kamlabazar",
+        "code": ""
+    },
+    "Bhadrapur": {
+        "name": "Bhadrapur",
+        "code": "BDP"
+    },
+    "Lukla": {
+        "name": "Lukla",
+        "code": "LUK",
+        "type": "own"
+    },
+    "Pokhara": {
+        "name": "Pokhara",
+        "code": "PKR"
+    },
+    "Nepalgunj": {
+        "name": "Nepalgunj",
+        "code": "KEP"
+    },
+    "Ramechhap": {
+        "name": "Ramechhap",
+        "code": "RCH",
+        "type": "own"
+    },
+    "Simara": {
+        "name": "Simara",
+        "code": "SIF"
+    },
+    "Tikap": {
+        "name": "Tikap",
+        "code": "TIK",
+        "type": "own"
+    }
+}

@@ -1,7 +1,7 @@
 import scrapy
 import json
 from pathlib import Path
-
+from datetime import datetime
 
 class BuddaairSpider(scrapy.Spider):
     name = "buddaair"
@@ -22,16 +22,18 @@ class BuddaairSpider(scrapy.Spider):
                     yield scrapy.Request(f"https://admin.buddhaair.com/api/flight-status/{fromKey}/{toValue.get('toValue')}", callback=self.parse, cb_kwargs={"from_id": fromKey, "to_id": toValue.get('toValue')})
     
     def parse(self, response, from_id=None, to_id=None):
+        scraped_date_time = datetime.now()
 
         for item in response.xpath('//Flight'):
             self.logger.info(f"Done: {from_id} -> {to_id}")
             yield {
+                "flight_no": item.xpath('FlightNo/text()').get(),
                 "from_id": from_id,
                 "to_id": to_id,
-                "id": item.xpath('FlightNo/text()').get(),
                 "departure": item.xpath('Departure/text()').get(),
                 "arrival": item.xpath('Arrival/text()').get(),
                 "flight_time": item.xpath('FlightTime/text()').get(),
                 "revised_time": item.xpath('RevisedTime/text()').get(),
                 "flight_status": item.xpath('FlightStatus/text()').get(),
+                "flight_remarks": item.xpath('FLightRemarks/text()').get()
             }
