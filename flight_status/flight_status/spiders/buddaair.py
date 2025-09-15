@@ -1,7 +1,6 @@
 import scrapy
 import json
 from pathlib import Path
-from datetime import datetime
 
 class BuddaairSpider(scrapy.Spider):
     name = "buddaair"
@@ -18,11 +17,9 @@ class BuddaairSpider(scrapy.Spider):
                 fromKey = fromObj['fromValue']
                 toObj = data[fromKey]
                 for toValue in toObj:
-                    self.logger.warning(f"https://admin.buddhaair.com/api/flight-status/{fromKey}/{toValue.get('toValue')}")
                     yield scrapy.Request(f"https://admin.buddhaair.com/api/flight-status/{fromKey}/{toValue.get('toValue')}", callback=self.parse, cb_kwargs={"from_id": fromKey, "to_id": toValue.get('toValue')})
     
     def parse(self, response, from_id=None, to_id=None):
-        scraped_date_time = datetime.now()
 
         for item in response.xpath('//Flight'):
             self.logger.info(f"Done: {from_id} -> {to_id}")

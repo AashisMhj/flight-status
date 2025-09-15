@@ -94,6 +94,7 @@ DOWNLOAD_DELAY = 1
 # Set settings whose default value is deprecated to a future-proof value
 FEED_EXPORT_ENCODING = "utf-8"
 filename = f'%(name)s{now}.json'
+RETRY_TIMES=1
 
 FEEDS = {
     os.path.join(OUTPUT_DIR, filename): {
