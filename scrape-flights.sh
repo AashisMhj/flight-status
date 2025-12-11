@@ -1,5 +1,5 @@
 source .venv/bin/activate
 cd flight_status/
-scrapy crawl buddaair
-scrapy crawl yetiairlines
-scrapy crawl shreeairlines
+scrapy crawl buddaair --loglevel=WARNING
+scrapy crawl yetiairlines --loglevel=WARNING
+scrapy crawl shreeairlines --loglevel=WARNING
