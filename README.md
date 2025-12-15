@@ -2,6 +2,7 @@
 Scrape the flight data of Domestic flight of Nepali Airlines.
 
 ## Setup
+Create a new file called .env. Then copy the content of .env.example and add all the necessary values
 ```bash
 ## setup env
 python3 -m venv .venv
