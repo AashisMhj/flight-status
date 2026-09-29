@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 OUTPUT_DIR = os.getenv("SCRAPY_OUTPUT_DIR", "outputs")
+ERROR_DIR = os.getenv('SCRAPY_ERROR_LOG', 'errors')
 
 BOT_NAME = "flight_status"
 now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -104,3 +105,10 @@ FEEDS = {
         'indent': 4,
     },
 }
+
+month = datetime.datetime.now().strftime("%Y-%m")
+
+LOG_FILE = os.path.join(ERROR_DIR, f'flight-status-{month}.log')
+LOG_LEVEL = "WARNING"
+LOG_ENCODING = "utf-8"
+LOG_FILE_APPEND = True   # append across runs in the same month
