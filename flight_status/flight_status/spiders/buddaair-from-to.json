@@ -14,7 +14,7 @@
     { "fromLabel": "Dhangadhi", "fromValue": "DHI" },
     { "fromLabel": "Janakpur", "fromValue": "JKR" },
     { "fromLabel": "Nepalgunj", "fromValue": "KEP" },
-    { "fromLabel": "Pokhara", "fromValue": "PKR" },
+    { "fromLabel": "Pokhara", "fromValue": "PHH" },
     { "fromLabel": "Rajbiraj", "fromValue": "RJB" },
     { "fromLabel": "Simara", "fromValue": "SIF" },
     { "fromLabel": "Surkhet", "fromValue": "SKH" },
@@ -30,7 +30,7 @@
     { "toLabel": "Dhangadhi", "toValue": "DHI" },
     { "toLabel": "Janakpur", "toValue": "JKR" },
     { "toLabel": "Nepalgunj", "toValue": "KEP" },
-    { "toLabel": "Pokhara", "toValue": "PKR" },
+    { "toLabel": "Pokhara", "toValue": "PHH" },
     { "toLabel": "Rajbiraj", "toValue": "RJB" },
     { "toLabel": "Simara", "toValue": "SIF" },
     { "toLabel": "Surkhet", "toValue": "SKH" },
@@ -39,32 +39,32 @@
   ],
   "BDP": [
     { "toLabel": "Kathmandu", "toValue": "KTM" },
-    { "toLabel": "Pokhara", "toValue": "PKR" }
+    { "toLabel": "Pokhara", "toValue": "PHH" }
   ],
   "BWA": [
     { "toLabel": "Bharatpur (chitwan)", "toValue": "BHR" },
     { "toLabel": "Kathmandu", "toValue": "KTM" },
-    { "toLabel": "Pokhara", "toValue": "PKR" }
+    { "toLabel": "Pokhara", "toValue": "PHH" }
   ],
   "BHR": [
     { "toLabel": "Kathmandu", "toValue": "KTM" },
-    { "toLabel": "Pokhara", "toValue": "PKR" }
+    { "toLabel": "Pokhara", "toValue": "PHH" }
   ],
   "BIR": [
     { "toLabel": "Kathmandu", "toValue": "KTM" },
-    { "toLabel": "Pokhara", "toValue": "PKR" },
+    { "toLabel": "Pokhara", "toValue": "PHH" },
     { "toLabel": "Tumlingtar", "toValue": "TMI" }
   ],
   "DHI": [
     { "toLabel": "Kathmandu", "toValue": "KTM" },
-    { "toLabel": "Pokhara", "toValue": "PKR" }
+    { "toLabel": "Pokhara", "toValue": "PHH" }
   ],
   "JKR": [{ "toLabel": "Kathmandu", "toValue": "KTM" }],
   "KEP": [
     { "toLabel": "Kathmandu", "toValue": "KTM" },
-    { "toLabel": "Pokhara", "toValue": "PKR" }
+    { "toLabel": "Pokhara", "toValue": "PHH" }
   ],
-  "PKR": [
+  "PHH": [
     { "toLabel": "Bhairahawa", "toValue": "BWA" },
     { "toLabel": "Bharatpur (chitwan)", "toValue": "BHR" },
     { "toLabel": "Kathmandu", "toValue": "KTM" },
@@ -73,7 +73,7 @@
   "RJB": [{ "toLabel": "Kathmandu", "toValue": "KTM" }],
   "SIF": [
     { "toLabel": "Kathmandu", "toValue": "KTM" },
-    { "toLabel": "Pokhara", "toValue": "PKR" }
+    { "toLabel": "Pokhara", "toValue": "PHH" }
   ],
   "SKH": [{ "toLabel": "Kathmandu", "toValue": "KTM" }],
   "TMI": [

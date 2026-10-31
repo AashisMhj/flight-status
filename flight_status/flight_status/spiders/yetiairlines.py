@@ -1,7 +1,8 @@
 import scrapy
-import json
-from pathlib import Path
-from datetime import datetime
+
+
+def clean(values):
+    return " ".join(" ".join(values).split())
 
 
 class YetiairlinesSpider(scrapy.Spider):
@@ -10,28 +11,23 @@ class YetiairlinesSpider(scrapy.Spider):
     start_urls = ["https://yetiairlines.com/flight-status"]
 
     def parse(self, response):
-        code_path = Path(__file__).parent / "code.json"
-        with open(code_path, "r", encoding="utf-8") as f:
-            code = json.load(f)
+        cards = response.css("article.landing-status-card")
+        if not cards:
+            self.logger.warning(f"No flight cards found on {response.url}, page layout may have changed")
 
-        rows = response.xpath("//table[@id='flightInfo']/tbody/tr")
-
-        for row in rows:
-            departure = row.xpath("./td[1]/text()").get(default="").strip()
-            arrival = row.xpath("./td[2]/text()").get(default="".strip())
-
-            from_id = code.get(departure).get('code')
-            to_id = code.get(arrival).get('code')
+        for card in cards:
+            origin = card.css(".landing-status-card__airport:not(.landing-status-card__airport--to)")
+            destination = card.css(".landing-status-card__airport--to")
 
             yield {
-                "flight_no": row.xpath("./td[3]/text()").get(default="").strip(),
-                "from_id": from_id,
-                "to_id": to_id,
-                "from": departure,
-                "to": arrival,
-                "flight_time": row.xpath("./td[4]/text()").get(default="").strip(),
-                "revised_time": row.xpath("./td[5]/text()").get(default="").strip(),
-                "flight_status": row.xpath("./td[6]/text()").get(default="").strip(),
-                "flight_remarks": row.xpath('./td[7]/text()').get(default="").strip()
+                "flight_no": clean(card.css(".landing-status-card__identity strong::text").getall()),
+                "from_id": clean(origin.css(".landing-status-card__code::text").getall()),
+                "to_id": clean(destination.css(".landing-status-card__code::text").getall()),
+                "from": clean(origin.css(".landing-status-card__city::text").getall()),
+                "to": clean(destination.css(".landing-status-card__city::text").getall()),
+                "flight_time": clean(origin.css("strong::text").getall()),
+                "arrival_time": clean(destination.css("strong::text").getall()),
+                "revised_time": clean(card.css(".landing-status-card__journey small::text").getall()),
+                "flight_status": clean(card.css(".landing-status-card__badge::text").getall()),
+                "flight_remarks": clean(card.css(".landing-status-card__footer::text").getall()),
             }
-        
